@@ -6,16 +6,20 @@ import java.util.Set;
 public class User {
 
     private String username;
-    private String address;
+    private String addressStreet;
+    private String addressZipCode;
+    private String addressCity;
     private Set<BillingDetails> billingDetails = new HashSet<>();
 
     public User() {
 
     }
 
-    public User(String username, String address) {
+    public User(String username, String addressStreet, String addressZipCode, String addressCity) {
         this.username = username;
-        this.address = address;
+        this.addressStreet = addressStreet;
+        this.addressZipCode = addressZipCode;
+        this.addressCity = addressCity;
     }
 
     public String getUsername() {
@@ -26,12 +30,28 @@ public class User {
         this.username = username;
     }
 
-    public String getAddress() {
-        return address;
+    public String getAddressStreet() {
+        return addressStreet;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setAddressStreet(String addressStreet) {
+        this.addressStreet = addressStreet;
+    }
+
+    public String getAddressZipcode() {
+        return addressZipCode;
+    }
+
+    public void setAddressZipcode(String addressZipcode) {
+        this.addressZipCode = addressZipcode;
+    }
+
+    public String getAddressCity() {
+        return addressCity;
+    }
+
+    public void setAddressCity(String addressCity) {
+        this.addressCity = addressCity;
     }
 
     public Set<BillingDetails> getBillingDetails() {
